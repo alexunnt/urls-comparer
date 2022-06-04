@@ -36,10 +36,6 @@ function App() {
     setLoaded(true);
   }
 
-  function showResult(firstFile, secondFile) {
-    compareFiles(firstFile, secondFile);
-  }
-
   return (
     <>
       <div className={appStyles.app}>
@@ -53,7 +49,7 @@ function App() {
           Приложение сравнивает эти два состояние и выводит информационное сообщение.
           Пример файлов находится в папке fixtures.
         </h2>
-        <Form onSubmit={showResult} />
+        <Form onSubmit={compareFiles} />
       </div>
 
       {loaded && (

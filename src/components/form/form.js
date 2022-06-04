@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import formStyles from './form.module.css';
 
@@ -48,6 +49,10 @@ function Form(props) {
             </fieldset>
         </form>
     );
+}
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired
 }
 
 export default Form;
